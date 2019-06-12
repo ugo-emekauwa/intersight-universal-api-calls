@@ -1,5 +1,5 @@
 # Cisco Intersight Universal API Calls
-The Cisco Intersight Universal API Calls module provides a set of functions that simplify creation, retrieval, modification, and deletion of resources on Cisco Intersight. Any API type listed in the Cisco Intersight API Reference library can be accessed including those which do not yet have a specific module in the Intersight SDK for Python.
+The Cisco Intersight Universal API Calls module provides a set of functions that simplify creation, retrieval, modification, and deletion of resources on Cisco Intersight. Available API types listed in the Cisco Intersight API Reference library can be accessed, including those which do not yet have a specific module in the Intersight SDK for Python.
 
 ## Prerequisites:
 1. Python 3 installed, which can be downloaded from https://www.python.org/downloads/.
@@ -11,7 +11,7 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 
 1. Please ensure the above prerequisites have been met.
 2. Download the intersight_universal_api_calls.py file for the Cisco Intersight Universal API Calls module from here on GitHub.
-3. Edit the intersight_universal_api_calls.py file to set the key_id and key variables.
+3. Edit the intersight_universal_api_calls.py file to set the key_id and key variables using the following instructions:
    - Open the intersight_universal_api_calls.py file in an IDLE or text editor of choice.
    - Find the comment **"MODULE REQUIREMENT #1"**.
    - Underneath, you will find the variable **key_id = ""**.
