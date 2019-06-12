@@ -5,6 +5,7 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 1. Python 3 installed, which can be downloaded from https://www.python.org/downloads/.
 2. The Cisco Intersight SDK for Python, which can be installed by running: "pip install git+https://github.com/CiscoUcs/intersight-python.git". More information on the Cisco Intersight SDK for Python can be found at https://github.com/CiscoUcs/intersight-python.
 3. An API key from your Intersight account. To learn how to generate an API key for your Intersight account, more information can be found at https://intersight.com/help/features#rest_apis.
+4. The path to any API types you are interested in working with. For example, if you are interested in creating an Adapter Configuration Policy on Intersight, you would need the path "adapter/ConfigPolicies". The path to available Cisco Intersight API types can be found in the API reference library at https://intersight.com/apidocs/introduction/overview/.
 
 ## Getting Started:
 
@@ -22,24 +23,99 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 ## How to Use:
 #### Available Functions:
 The Cisco Intersight Universal API Calls module contains six functions for creating, retrieving, modifying, and deleting resources. Here are the functions:
+
 - **iu_get()** - Performs a universal or generic GET on objects under any available Intersight API type.
    - The required arguments are **api_path**.
-   - Sample Usage:
+   - Sample command usage:
    ```
    adapters = "adapter/ConfigPolicies"
+   
    iu_get(adapters)
    ```
    
 - **iu_get_moid()** - Performs a universal or generic GET on a specified object under any available Intersight API type.
    - The required arguments are **api_path** and **moid**.
+   - Sample command usage:
+   ```
+   adapters = "adapter/ConfigPolicies"
+   
+   adapter1_moid = "5c8987b17564777d30212345"
+   
+   iu_get_moid(adapters,adapter1_moid)
+   ```
+
 - **iu_delete_moid()** - Performs a universal or generic DELETE on a specified object under any available Intersight API type.
    - The required arguments are **api_path** and **moid**.
+   - Sample command usage:
+   ```
+   adapters = "adapter/ConfigPolicies"
+   
+   adapter1_moid = "5c8987b17564777d30212345"
+   
+   iu_delete_moid(adapters,adapter1_moid)
+   ```
+
 - **iu_post()** - Performs a universal or generic POST of an object under any available Intersight API type.
    - The required arguments are **api_path** and **body**.
+   - Sample command usage:
+   ```
+   adapters = "adapter/ConfigPolicies"
+   
+   adapter2_body = {
+   'Name': 'Adapter_Policy2', 
+   'Settings': [
+   {
+   'ObjectType': 'adapter.AdapterConfig', 
+   'EthSettings': {'ObjectType': 'adapter.EthSettings', 'LldpEnabled': True}, 
+   'FcSettings': {'ObjectType': 'adapter.FcSettings', 'FipEnabled': True}, 
+   'SlotId': '1'
+   }
+   ]
+   }
+   
+   iu_post(adapters,adapter2_body)
+   ```
+
 - **iu_post_moid()** - Performs a universal or generic POST on a specified object under any available Intersight API type.
    - The required arguments are **api_path**, **moid** and **body**.
+   - Sample command usage:
+   ```
+   adapters = "adapter/ConfigPolicies"
+   
+   adapter2_moid = "5c8987b17564777d30252537"
+   
+   adapter2_body = {
+   'Settings': [
+   {
+   'EthSettings': {'ObjectType': 'adapter.EthSettings', 'LldpEnabled': False}, 
+   'SlotId': '1'
+   }
+   ]
+   }
+   
+   iu_post_moid(adapters,adapter2_body)
+   ```
+
 - **iu_patch_moid()** - Performs a universal or generic PATCH on a specified object under any available Intersight API type.
    - The required arguments are **api_path**, **moid** and **body**.
+   - Sample command usage:
+   ```
+   adapters = "adapter/ConfigPolicies"
+   
+   adapter2_moid = "5c8987b17564777d30252537"
+   
+   adapter2_body = {
+   'Settings': [
+   {
+   'FcSettings': {'ObjectType': 'adapter.FcSettings', 'FipEnabled': False}, 
+   'SlotId': '1'
+   }
+   ]
+   }
+   
+   iu_patch_moid(adapters,adapter2_body)
+   ```
+
 
 ### Author:
 Ugo Emekauwa
