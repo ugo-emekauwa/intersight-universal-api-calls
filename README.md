@@ -23,11 +23,11 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 
 ## How to Use:
 #### Available Functions:
-The Cisco Intersight Universal API Calls module contains six functions for creating, retrieving, modifying, and deleting resources. Here are the functions:
+The Cisco Intersight Universal API Calls module contains six functions for creating, retrieving, modifying, and deleting resources. Here are the functions and sample command usage for each:
 
 - **iu_get()** - Performs a universal or generic GET on objects under any available Intersight API type.
    - The required arguments are **api_path**.
-   - Sample command usage:
+   - Here are sample commands to retrieve all available Adapter Configuration policies:
    ```
    adapters = "adapter/ConfigPolicies"
    
@@ -36,7 +36,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
    
 - **iu_get_moid()** - Performs a universal or generic GET on a specified object under any available Intersight API type.
    - The required arguments are **api_path** and **moid**.
-   - Sample command usage:
+   - Here are sample commands to retrieve a specific Adapter Configuration policy. The MOID below is an example:
    ```
    adapters = "adapter/ConfigPolicies"
    
@@ -47,7 +47,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 
 - **iu_delete_moid()** - Performs a universal or generic DELETE on a specified object under any available Intersight API type.
    - The required arguments are **api_path** and **moid**.
-   - Sample command usage:
+   - Here are sample commands to delete a specific Adapter Configuration policy. The MOID below is an example:
    ```
    adapters = "adapter/ConfigPolicies"
    
@@ -58,7 +58,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 
 - **iu_post()** - Performs a universal or generic POST of an object under any available Intersight API type.
    - The required arguments are **api_path** and **body**.
-   - Sample command usage:
+   - Here are sample commands to create a new Adapter Configuration policy with 1 slot and LLDP and FIP protocol settings enabled:
    ```
    adapters = "adapter/ConfigPolicies"
    
@@ -79,7 +79,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 
 - **iu_post_moid()** - Performs a universal or generic POST on a specified object under any available Intersight API type.
    - The required arguments are **api_path**, **moid** and **body**.
-   - Sample command usage:
+   - Here are sample commands to modify a specific Adapter Configuration policy. In this example, the LLDP and FIP protocol settings on slot 1 of the Adapter Configuration policy are being disabled. The MOID below is an example:
    ```
    adapters = "adapter/ConfigPolicies"
    
@@ -88,7 +88,8 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
    adapter2_body = {
    'Settings': [
    {
-   'EthSettings': {'ObjectType': 'adapter.EthSettings', 'LldpEnabled': False}, 
+   'EthSettings': {'ObjectType': 'adapter.EthSettings', 'LldpEnabled': False},
+   'FcSettings': {'ObjectType': 'adapter.FcSettings', 'FipEnabled': False}, 
    'SlotId': '1'
    }
    ]
@@ -99,20 +100,13 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 
 - **iu_patch_moid()** - Performs a universal or generic PATCH on a specified object under any available Intersight API type.
    - The required arguments are **api_path**, **moid** and **body**.
-   - Sample command usage:
+   - Here are sample commands to modify a specific Adapter Configuration policy. In this example, the Adapter Configuration policy name is being changed. The MOID below is an example:
    ```
    adapters = "adapter/ConfigPolicies"
    
    adapter2_moid = "5c8987b17564777d30252537"
    
-   adapter2_body = {
-   'Settings': [
-   {
-   'FcSettings': {'ObjectType': 'adapter.FcSettings', 'FipEnabled': False}, 
-   'SlotId': '1'
-   }
-   ]
-   }
+   adapter2_body = {'Name': 'Adapter_Policy2_Updated'}
    
    iu_patch_moid(adapters,adapter2_body)
    ```
