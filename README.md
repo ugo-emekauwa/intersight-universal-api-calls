@@ -9,7 +9,7 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 
 ## Getting Started:
 
-1. Please ensure the above prerequistes have been met.
+1. Please ensure the above prerequisites have been met.
 2. Download the intersight_universal_api_calls.py file for the Cisco Intersight Universal API Calls module from here on GitHub.
 3. Edit the intersight_universal_api_calls.py file to set the key_id and key variables.
    - Open the intersight_universal_api_calls.py file in an IDLE or text editor of choice.
