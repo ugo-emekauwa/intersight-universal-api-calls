@@ -23,11 +23,17 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 #### Available Functions:
 The Cisco Intersight Universal API Calls module contains six functions for creating, retrieving, modifying, and deleting resources. Here are the functions:
 - **iu_get()** - Performs a universal or generic GET on objects under any available Intersight API type.
+   - The required arguments are **api_path**.
 - **iu_get_moid()** - Performs a universal or generic GET on a specified object under any available Intersight API type.
+   - The required arguments are **api_path** and **moid**.
 - **iu_delete_moid()** - Performs a universal or generic DELETE on a specified object under any available Intersight API type.
+   - The required arguments are **api_path** and **moid**.
 - **iu_post()** - Performs a universal or generic POST of an object under any available Intersight API type.
+   - The required arguments are **api_path** and **body**.
 - **iu_post_moid()** - Performs a universal or generic POST on a specified object under any available Intersight API type.
+   - The required arguments are **api_path**, **moid** and **body**.
 - **iu_patch_moid()** - Performs a universal or generic PATCH on a specified object under any available Intersight API type.
+   - The required arguments are **api_path**, **moid** and **body**.
 
 ### Author:
 Ugo Emekauwa
