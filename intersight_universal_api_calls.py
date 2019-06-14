@@ -87,7 +87,7 @@ def iu_get_moid(api_path,moid):
     moid: The managed object ID of the targeted API object.
 
   Returns:
-    A dictionary containing all objects of the specified API type.
+    A dictionary containing all parameters of the specified API object.
 
   Raises:
     Exception: An exception occured while performing the API call. The exact error will be
