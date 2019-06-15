@@ -32,7 +32,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
    - The required arguments are **api_path**.
    - Here are sample commands to retrieve all available Adapter Configuration policies:
    
-   ```pycon
+   ```python3
    adapters = "adapter/ConfigPolicies"
    
    iu_get(adapters)
