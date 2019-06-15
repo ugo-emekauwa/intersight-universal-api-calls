@@ -31,7 +31,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_get()** - Performs a universal or generic GET on objects under any available Intersight API type.
    - The required arguments are **api_path**.
    - Here are sample commands to retrieve all available Adapter Configuration policies:
-   ```
+   ```python
    adapters = "adapter/ConfigPolicies"
    
    iu_get(adapters)
@@ -40,7 +40,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_get_moid()** - Performs a universal or generic GET on a specified object under any available Intersight API type.
    - The required arguments are **api_path** and **moid**.
    - Here are sample commands to retrieve a specific Adapter Configuration policy. The MOID below is an example:
-   ```
+   ```py
    adapters = "adapter/ConfigPolicies"
    
    adapter1_moid = "5c8987b17564777d30212345"
