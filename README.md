@@ -31,7 +31,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_get()** - Performs a universal or generic GET on objects under any available Intersight API type.
    - The required arguments are **api_path**.
    - Here are sample commands to retrieve all available Adapter Configuration policies:
-   ```python
+   ```py
    adapters = "adapter/ConfigPolicies"
    
    iu_get(adapters)
@@ -51,7 +51,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_delete_moid()** - Performs a universal or generic DELETE on a specified object under any available Intersight API type.
    - The required arguments are **api_path** and **moid**.
    - Here are sample commands to delete a specific Adapter Configuration policy. The MOID below is an example:
-   ```
+   ```py
    adapters = "adapter/ConfigPolicies"
    
    adapter1_moid = "5c8987b17564777d30212345"
@@ -62,7 +62,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_post()** - Performs a universal or generic POST of an object under any available Intersight API type.
    - The required arguments are **api_path** and **body**.
    - Here are sample commands to create a new Adapter Configuration policy containing one slot with an ID of #1 that has LLDP and FIP protocol settings enabled:
-   ```
+   ```py
    adapters = "adapter/ConfigPolicies"
    
    adapter2_body = {
@@ -83,7 +83,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_post_moid()** - Performs a universal or generic POST on a specified object under any available Intersight API type.
    - The required arguments are **api_path**, **moid** and **body**.
    - Here are sample commands to modify a specific Adapter Configuration policy. In this instance, the LLDP and FIP protocol settings on slot ID #1 of the Adapter Configuration policy are being disabled. The MOID below is an example:
-   ```
+   ```py
    adapters = "adapter/ConfigPolicies"
    
    adapter2_moid = "5c8987b17564777d30252537"
@@ -104,7 +104,7 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
 - **iu_patch_moid()** - Performs a universal or generic PATCH on a specified object under any available Intersight API type.
    - The required arguments are **api_path**, **moid** and **body**.
    - Here are sample commands to modify a specific Adapter Configuration policy. In this instance, the Adapter Configuration policy name is being changed. The MOID below is an example:
-   ```
+   ```py
    adapters = "adapter/ConfigPolicies"
    
    adapter2_moid = "5c8987b17564777d30252537"
