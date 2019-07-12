@@ -120,8 +120,8 @@ The Cisco Intersight Universal API Calls module contains six functions for creat
    iu_patch_moid(adapters,adapter2_moid,adapter2_body_update2)
    ```
 
-### Author:
+## Author:
 Ugo Emekauwa
 
-### Contact Information:
+## Contact Information:
 uemekauw@cisco.com or uemekauwa@gmail.com
