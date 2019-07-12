@@ -20,7 +20,7 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
    - Fill in between the quotes of the **key_id** variable value with the ID of your API key. For example: **_key_id = "5c89885075646127773ec143/5c82fc477577712d3088eb2f/5c8987b17577712d302eaaff"_**.
    - Find the comment **"MODULE REQUIREMENT 2"**.
    - Underneath, you will find the variable **key = ""**.
-   - Fill in between the quotes of the **key** variable value with your system's file path to the SecretKey.txt file for your API key. For example: **_key = "C:\Keys\Key1\SecretKey.txt"_**.
+   - Fill in between the quotes of the **key** variable value with your system's file path to the SecretKey.txt file for your API key. For example: **_key = "C:\\Keys\\Key1\\SecretKey.txt"_**.
 4. Save the changes you have made to the intersight_universal_api_calls.py file.
 5. The intersight_universal_api_calls.py file is now ready for use. The file can be ran directly or imported into another module. See the **"How to Use:"** section for information on the available functions and sample commands for directions on use.
 
