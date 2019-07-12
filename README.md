@@ -5,7 +5,11 @@ The Cisco Intersight Universal API Calls module provides a set of functions that
 
 ## Prerequisites:
 1. Python 3 installed, which can be downloaded from https://www.python.org/downloads/.
-2. The Cisco Intersight SDK for Python, which can be installed by running: "pip install git+https://github.com/CiscoUcs/intersight-python.git". More information on the Cisco Intersight SDK for Python can be found at https://github.com/CiscoUcs/intersight-python.
+2. The Cisco Intersight SDK for Python, which can be installed by running:
+   ```py
+   pip install git+https://github.com/CiscoUcs/intersight-python.git
+   ```
+   More information on the Cisco Intersight SDK for Python can be found at https://github.com/CiscoUcs/intersight-python.
 3. An API key from your Intersight account. To learn how to generate an API key for your Intersight account, more information can be found at https://intersight.com/help/features#rest_apis.
 4. The path to any API types you are interested in working with. For example, if you are interested in creating an Adapter Configuration Policy on Intersight, you would need the path "adapter/ConfigPolicies". The path to available Cisco Intersight API types can be found in the API Reference section at https://intersight.com/apidocs/introduction/overview/.
 
